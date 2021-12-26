@@ -7,7 +7,7 @@ Created on Sat Dec 18 11:12:46 2021
 import numpy as np
 from uncertainties import unumpy, ufloat
 
-from plotting import create_ufloatmesh, plot_ufloatmesh
+from uvisualisation.plotting import create_ufloatmesh, plot_ufloatmesh
 
 
 def test_main():
