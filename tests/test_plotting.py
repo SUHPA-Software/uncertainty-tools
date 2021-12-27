@@ -4,6 +4,7 @@ Created on Sat Dec 18 11:12:46 2021
 
 @author: yr3g17
 """
+from matplotlib import pyplot as plt
 import numpy as np
 from uncertainties import unumpy, ufloat
 
@@ -11,6 +12,7 @@ from uvisualisation.plotting import create_ufloatmesh, plot_ufloatmesh
 
 
 def test_main():
+    print(plt.gcf().number)
     # BMP280 - Uncertainty in density derivations
     p_interval_hPa, p_stddev_hPa = (970, 1030), 1
     t_interval_C, t_stddev_C = (8, 25), 1
@@ -63,3 +65,4 @@ def test_main():
                                  vfss_interval_V, vfss_stddev_V, eqairspeed)
     labels = "Equivalent Airspeed [m/s]", "V_Out [V]", "V_FSS [V]"
     plot_ufloatmesh(*plotdata, *labels)
+    print(plt.gcf().number)
